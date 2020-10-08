@@ -84,6 +84,9 @@ body {
 
 .screen .content .form-box input[type="file"] {
   display: none;
+}
+
+.screen .content .form-box label[for="profile-image"] {
   cursor: pointer;
 }
 
