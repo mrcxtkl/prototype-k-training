@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;700&display=swap");
+
+*, input, button{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #222;
+}
+
+#root {
+  width: 90%;
+  height: 80%;
+
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.screen {
+  border-radius: 10px;
+  width: 200px;
+  height: 400px;
+
+  box-shadow: 1px 1px 5px black;
+}
+
+/* Header */
+.screen .header {
+  height: 30px;
+  width: 100%;
+
+  background-color: #111;
+  border-radius: 8px 8px 0 0;
+
+  font-size: 14px;
+  color: #f5f5f5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content */
+.screen .content {
+  height: calc(100% - (30px * 2));
+  width: 100%;
+  padding: 10px;
+
+  background-color: #333;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screen .content .title {
+  font-size: 20px;
+  color: #fff;
+}
+
+.screen .content .form-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen .content .form-box input[type="file"] {
+  display: none;
+}
+
+.screen .content .form-box input,
+.screen .content .form-box select,
+.screen .content .form-box label[for="profile-image"] {
+  height: 46px;
+  width: 80%;
+
+  background-color: #222;
+  color: #fff;
+  border-radius: 4px;
+  border: 2px solid #57ff57;
+
+  outline: none;
+  padding: 10px;
+  margin-bottom: 4px;
+}
+
+.screen .content .form-box label[for="profile-image"] {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #949494;
+}
+
+.screen .content .form-box select {
+  font-size: 12px;
+}
+
+.screen .content .form-box button {
+  height: 44px;
+  width: 80%;
+  margin-top: 4px;
+
+  background-color: #57ff57;
+  font-weight: bold;
+  border-radius: 4px;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.screen .content .form-box button:hover {
+  background-color: #57ff5777;
+  transition: .6s;
+}
+
+.screen .content .form-box .progressbar {
+  width: 80%;
+  height: 20px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 50px;
+
+  background-color: #555;
+}
+
+.screen .content .form-box .progressbar div {
+  width: 25%;
+  height: 20px;
+  border-radius: 50px;
+
+  background-color: #5757ff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar */
+.screen .navbar {
+  height: 30px;
+  width: 100%;
+
+  background-color: #111;
+  border-radius: 0 0 8px 8px;
+
+  font-size: 20px;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+/* Específicos */
+.screen .content .form-box.block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+.screen .content .form-box.block button {
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+  margin: 5px 3px;
+}
+
+.screen .content .form-box.horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen .content .form-box.horizontal > button {
+  width: 45px;
+  height: 45px;
+  margin: 2.5px;
+  border-radius: 100%;
+}
