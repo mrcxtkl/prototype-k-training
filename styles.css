@@ -84,6 +84,7 @@ body {
 
 .screen .content .form-box input[type="file"] {
   display: none;
+  cursor: pointer;
 }
 
 .screen .content .form-box input,
