@@ -36,7 +36,7 @@ body {
 .screen {
   border-radius: 10px;
   width: 200px;
-  height: 400px;
+  height: 450px;
 
   box-shadow: 1px 1px 5px black;
 }
@@ -72,6 +72,11 @@ body {
 }
 
 .screen .content .title {
+  font-size: 20px;
+  color: #fff;
+}
+
+.screen .content .result {
   font-size: 20px;
   color: #fff;
 }

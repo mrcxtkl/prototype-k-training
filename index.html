@@ -71,25 +71,45 @@
         <div class="header">Screen 3</div>
 
         <!-- Content -->
-        <div class="content">
+        <div class="content" id="form-basal">
           <h1 class="title">Calcular Basal</h1>
 
           <div class="form-box">
-            <input type="number" min="0.01" placeholder="Peso" />
-            <input type="number" min="0.01" placeholder="Altura" />
-            <input type="number" min="1" placeholder="Idade" />
-            <select>
+            <input type="number" min="0.01" placeholder="Peso" id="peso-basal" required />
+            <input type="number" min="0.01" placeholder="Altura" id="altura-basal" required />
+            <input type="number" min="1" placeholder="Idade" id="idade-basal" required />
+            <select id="genero-basal">
               <option>Escolha seu gênero</option>
-              <option>Masculino</option>
-              <option>Feminino</option>
+              <option value="m">Masculino</option>
+              <option value="f">Feminino</option>
+            </select>
+
+            <select id="frequencia-basal">
+              <option>Frequência de exercícios</option>
+              <option value="1.2">pouco ou nenhum exercício</option>
+              <option value="1.375">exercício leve 1 a 3 dias por semana</option>
+              <option value="1.55">exercício moderado, faz esportes 3 a 5 dias por semana</option>
+              <option value="1.725">exercício pesado de 5 a 6 dias por semana</option>
+              <option value="1.9">exercício pesado diariamente e até 2 vezes por dia</option>
             </select>
           </div>
 
           <div class="form-box">
-            <button type="button">Calcular</button>
+            <button type="button" onclick="Basal.submit()">Calcular</button>
           </div>
         </div>
 
+        <div class="content" id="result-basal" style="display: none">
+          <h1 class="title">Resultado Basal</h1>
+
+          <div class="info">
+            <span class="result" id="basal-result-label">2000 Kcal</span>
+          </div>
+
+          <div class="form-box">
+            <button type="button" onclick="Basal.changeView()">Voltar</button>
+          </div>
+        </div>
         <!-- Navbar -->
         <div class="navbar">
           <span><</span>
@@ -158,4 +178,5 @@
       <!-- /End-->
     </section>
   </body>
+  <script src="index.js"></script>
 </html>
